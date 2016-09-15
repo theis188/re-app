@@ -1,0 +1,209 @@
+unincorporated-santa-susana-mountains, Unincorporated Santa Susana Mountains, 419.9, 190
+chesterfield-square, Chesterfield Square, 388.6, 248
+rancho-park, Rancho Park, 324.8, 148
+rancho-dominguez, Rancho Dominguez, 320.7, 81
+fairfax, Fairfax, 303.1, 405
+elysian-park, Elysian Park, 300.8, 80
+beverly-grove, Beverly Grove, 268.2, 613
+playa-vista, Playa Vista, 267.9, 161
+baldwin-hillscrenshaw, Baldwin Hills/Crenshaw, 258.0, 829
+marina-del-rey, Marina del Rey, 253.0, 210
+westchester, Westchester, 243.5, 1,047
+leimert-park, Leimert Park, 231.5, 285
+west-hollywood, West Hollywood, 228.5, 816
+west-los-angeles, West Los Angeles, 217.2, 295
+cerritos, Cerritos, 208.9, 1,083
+university-park, University Park, 205.7, 518
+vermont-slauson, Vermont-Slauson, 205.5, 583
+hollywood, Hollywood, 202.2, 1,729
+athens, Athens, 192.3, 175
+green-meadows, Green Meadows, 190.5, 582
+artesia, Artesia, 189.3, 310
+vermont-vista, Vermont Vista, 189.2, 471
+vermont-knolls, Vermont Knolls, 188.2, 406
+ladera-heights, Ladera Heights, 187.4, 122
+manchester-square, Manchester Square, 187.4, 227
+venice, Venice, 186.1, 761
+harvard-park, Harvard Park, 182.8, 199
+northridge, Northridge, 182.1, 1,129
+florence, Florence, 176.6, 823
+gramercy-park, Gramercy Park, 176.3, 197
+hancock-park, Hancock Park, 170.6, 182
+broadway-manchester, Broadway-Manchester, 169.4, 437
+west-compton, West Compton, 169.0, 92
+east-pasadena, East Pasadena, 165.4, 100
+studio-city, Studio City, 164.2, 611
+carthay, Carthay, 164.1, 84
+woodland-hills, Woodland Hills, 158.5, 1,005
+hollywood-hills, Hollywood Hills, 155.7, 358
+north-whittier, North Whittier, 154.0, 67
+canoga-park, Canoga Park, 151.0, 915
+lakewood, Lakewood, 150.7, 1,197
+toluca-lake, Toluca Lake, 150.7, 129
+cheviot-hills, Cheviot Hills, 150.6, 110
+larchmont, Larchmont, 149.0, 137
+hollywood-hills-west, Hollywood Hills West, 144.4, 231
+west-carson, West Carson, 143.7, 302
+sherman-oaks, Sherman Oaks, 143.7, 940
+mid-wilshire, Mid-Wilshire, 142.4, 672
+south-el-monte, South El Monte, 142.3, 298
+north-hollywood, North Hollywood, 142.2, 1,241
+malibu, Malibu, 142.2, 178
+paramount, Paramount, 141.9, 785
+compton, Compton, 141.1, 1,332
+tarzana, Tarzana, 140.3, 530
+chatsworth, Chatsworth, 139.9, 519
+harbor-gateway, Harbor Gateway, 139.0, 584
+northeast-antelope-valley, Northeast Antelope Valley, 136.3, 62
+bellflower, Bellflower, 135.0, 983
+vermont-square, Vermont Square, 134.6, 640
+valley-village, Valley Village, 134.0, 344
+pico-robertson, Pico-Robertson, 133.5, 257
+playa-del-rey, Playa del Rey, 133.4, 151
+historic-south-central, Historic South-Central, 132.5, 696
+lancaster, Lancaster, 130.9, 1,581
+wilmington, Wilmington, 130.1, 709
+lincoln-heights, Lincoln Heights, 129.6, 384
+los-feliz, Los Feliz, 127.8, 472
+van-nuys, Van Nuys, 127.1, 1,408
+valley-glen, Valley Glen, 126.3, 794
+castaic-canyons, Castaic Canyons, 126.3, 98
+cypress-park, Cypress Park, 126.2, 137
+sawtelle, Sawtelle, 124.8, 483
+windsor-square, Windsor Square, 124.3, 77
+carson, Carson, 123.1, 1,102
+watts, Watts, 122.1, 501
+encino, Encino, 121.8, 543
+exposition-park, Exposition Park, 120.7, 404
+mission-hills, Mission Hills, 120.4, 234
+lake-balboa, Lake Balboa, 119.5, 313
+pico-rivera, Pico Rivera, 119.2, 753
+south-park, South Park, 119.0, 391
+harvard-heights, Harvard Heights, 118.8, 240
+downtown, Downtown, 118.0, 2,447
+hyde-park, Hyde Park, 117.9, 458
+silver-lake, Silver Lake, 117.7, 387
+stevenson-ranch, Stevenson Ranch, 117.3, 101
+florence-firestone, Florence-Firestone, 116.2, 699
+lynwood, Lynwood, 113.9, 796
+west-adams, West Adams, 113.8, 260
+koreatown, Koreatown, 112.9, 1,403
+view-park-windsor-hills, View Park-Windsor Hills, 112.1, 124
+southeast-antelope-valley, Southeast Antelope Valley, 110.0, 58
+westmont, Westmont, 109.6, 345
+panorama-city, Panorama City, 109.4, 762
+del-rey, Del Rey, 106.7, 352
+boyle-heights, Boyle Heights, 106.7, 1,059
+winnetka, Winnetka, 106.5, 584
+echo-park, Echo Park, 106.1, 465
+reseda, Reseda, 105.7, 704
+mid-city, Mid-City, 105.6, 581
+san-dimas, San Dimas, 105.0, 368
+north-hills, North Hills, 104.8, 613
+alondra-park, Alondra Park, 104.6, 90
+central-alameda, Central-Alameda, 104.0, 454
+granada-hills, Granada Hills, 103.5, 559
+rosemead, Rosemead, 103.2, 550
+eagle-rock, Eagle Rock, 102.4, 353
+brentwood, Brentwood, 102.4, 341
+hawaiian-gardens, Hawaiian Gardens, 101.9, 152
+del-aire, Del Aire, 101.8, 92
+east-hollywood, East Hollywood, 100.8, 788
+palmdale, Palmdale, 100.5, 1,180
+westlake-village, Westlake Village, 99.3, 86
+adams-normandie, Adams-Normandie, 98.9, 183
+sun-valley, Sun Valley, 97.7, 799
+hacienda-heights, Hacienda Heights, 97.3, 521
+east-compton, East Compton, 97.1, 134
+westlake, Westlake, 96.6, 1,137
+norwalk, Norwalk, 95.7, 988
+pico-union, Pico-Union, 94.5, 422
+shadow-hills, Shadow Hills, 94.4, 135
+la-habra-heights, La Habra Heights, 93.5, 57
+san-pedro, San Pedro, 93.2, 802
+mount-washington, Mount Washington, 92.4, 125
+arlington-heights, Arlington Heights, 92.2, 215
+willowbrook, Willowbrook, 92.0, 316
+rowland-heights, Rowland Heights, 92.0, 437
+jefferson-park, Jefferson Park, 90.2, 219
+south-san-gabriel, South San Gabriel, 88.9, 72
+valinda, Valinda, 88.6, 191
+west-hills, West Hills, 88.1, 365
+palms, Palms, 87.1, 396
+walnut, Walnut, 86.7, 260
+sunland, Sunland, 85.1, 140
+arleta, Arleta, 84.6, 276
+avocado-heights, Avocado Heights, 83.8, 146
+northwest-antelope-valley, Northwest Antelope Valley, 83.7, 28
+harbor-city, Harbor City, 82.6, 215
+westwood, Westwood, 81.5, 424
+la-mirada, La Mirada, 81.4, 381
+east-san-gabriel, East San Gabriel, 80.7, 179
+lawndale, Lawndale, 79.4, 252
+santa-clarita, Santa Clarita, 79.3, 1,248
+rolling-hills-estates, Rolling Hills Estates, 79.2, 66
+quartz-hill, Quartz Hill, 79.1, 74
+north-el-monte, North El Monte, 78.3, 29
+beverlywood, Beverlywood, 77.9, 50
+temple-city, Temple City, 77.8, 259
+mar-vista, Mar Vista, 77.4, 290
+charter-oak, Charter Oak, 77.4, 70
+west-whittier-los-nietos, West Whittier-Los Nietos, 77.3, 200
+san-pasqual, San Pasqual, 76.8, 16
+sylmar, Sylmar, 76.6, 610
+east-la-mirada, East La Mirada, 76.3, 72
+walnut-park, Walnut Park, 76.0, 123
+pacoima, Pacoima, 75.4, 613
+la-puente, La Puente, 75.1, 308
+duarte, Duarte, 74.5, 160
+lomita, Lomita, 74.1, 148
+pacific-palisades, Pacific Palisades, 73.3, 187
+diamond-bar, Diamond Bar, 73.1, 415
+atwater-village, Atwater Village, 71.8, 111
+lake-view-terrace, Lake View Terrace, 71.5, 91
+highland-park, Highland Park, 71.2, 433
+glassell-park, Glassell Park, 70.9, 176
+tujunga, Tujunga, 66.7, 189
+montecito-heights, Montecito Heights, 65.0, 118
+littlerock, Littlerock, 64.8, 9
+beverly-crest, Beverly Crest, 64.8, 75
+porter-ranch, Porter Ranch, 64.8, 198
+la-canada-flintridge, La Cañada Flintridge, 64.3, 131
+el-sereno, El Sereno, 61.7, 270
+unincorporated-santa-monica-mountains, Unincorporated Santa Monica Mountains, 61.6, 55
+lennox, Lennox, 61.4, 141
+chinatown, Chinatown, 59.6, 172
+hidden-hills, Hidden Hills, 58.7, 11
+west-puente-valley, West Puente Valley, 57.4, 137
+agoura-hills, Agoura Hills, 57.1, 116
+desert-view-highlands, Desert View Highlands, 56.8, 13
+la-crescenta-montrose, La Crescenta-Montrose, 56.2, 104
+bel-air, Bel-Air, 55.7, 46
+south-whittier, South Whittier, 54.4, 301
+south-san-jose-hills, South San Jose Hills, 52.8, 107
+calabasas, Calabasas, 52.7, 122
+mayflower-village, Mayflower Village, 50.6, 59
+citrus, Citrus, 49.3, 59
+rancho-palos-verdes, Rancho Palos Verdes, 49.2, 203
+altadena, Altadena, 48.7, 208
+topanga, Topanga, 48.5, 36
+vincent, Vincent, 47.9, 72
+elysian-valley, Elysian Valley, 47.6, 37
+avalon, Avalon, 47.2, 15
+castaic, Castaic, 45.7, 77
+val-verde, Val Verde, 42.4, 8
+ramona, Ramona, 39.5, 16
+sun-village, Sun Village, 39.5, 37
+northwest-palmdale, Northwest Palmdale, 35.2, 11
+acton, Acton, 30.7, 20
+rolling-hills, Rolling Hills, 28.0, 9
+green-valley, Green Valley, 26.5, 2
+hasley-canyon, Hasley Canyon, 23.6, 1
+century-city, Century City, 22.1, 107
+lake-los-angeles, Lake Los Angeles, 21.5, 24
+bradbury, Bradbury, 15.8, 2
+elizabeth-lake, Elizabeth Lake, 14.5, 2
+agua-dulce, Agua Dulce, 6.4, 2
+west-san-dimas, West San Dimas, 0.0, 0
+leona-valley, Leona Valley, 0.0, 0
+lake-hughes, Lake Hughes, 0.0, 0
