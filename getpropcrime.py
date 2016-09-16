@@ -1,7 +1,7 @@
 import urllib2
 import re
 
-savefile = open('propcrim.txt','w')
+savefile = open(r'Data\propcrim.txt','w')
 output = [];
 a=0
 waitfor=0
