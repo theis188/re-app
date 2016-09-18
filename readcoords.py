@@ -2,21 +2,26 @@ import os
 import matplotlib.pyplot as plt
 import ast
 
-basepath = r"C:\Users\Matt\Desktop\Python_App\RE_App\Coords"
+def coords():
 
-filelist = os.listdir(basepath)
-ax = plt.subplot()
-coordl = {}
+	#basepath = r"C:\Users\Matt\Desktop\Python_App\RE_App\Coords"
+	basepath = r'Coords'
 
-for file in filelist:
-	lines = open(basepath + r'\\' + file)
-	for line in lines:
-		coords = ast.literal_eval(line)
-		xy = zip(*coords[0][0])
-		coordl[file] = xy
+	filelist = os.listdir(basepath)
+	ax = plt.subplot()
+	coordl = {}
 
-print('Done!')
-for key in coordl.keys():
-	ax.plot(*coordl[key])
-		
-plt.show()
+	for file in filelist:
+		lines = open(basepath + r'\\' + file)
+		for line in lines:
+			coords = ast.literal_eval(line)
+			xy = zip(*coords[0][0])
+			coordl[file] = xy
+
+	return coordl
+
+	print('Done!')
+	for key in coordl.keys():
+		ax.plot(*coordl[key])
+			
+	plt.show()
