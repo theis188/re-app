@@ -13,14 +13,25 @@ coordlist = readcoords.coords(namelist)
 
 num2get = 1
 
-startnum = len(list(open(r'Data/restaurants.csv')))
+openfile = open(r'Data/restaurants.csv', "r")
+donelist = []
+
+for line in openfile:
+	donelist.append(line.split(',')[0])
+openfile.close()
+
+print donelist
+aaa = raw_input('already done continue?')
 
 r='350'
 
 myfile = open(r'Data/restaurants.csv', "a")
-
-for i in range(startnum,startnum+num2get):
+z=0
+for i in range(len( coordlist.keys() )):
+	if z == num2get: break
 	key = coordlist.keys()[i]
+	if key in donelist: continue
+	z += 1
 	print key
 	xy = coordlist[key]
 	xylist = zip(*xy)

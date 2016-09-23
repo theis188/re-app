@@ -18,7 +18,7 @@ for website in urls:
 	site = urllib2.urlopen(website)
 	for line in site:
 		item = re.search('slug: "(.+)",',line)
-		if item:
+		if item and (not (item.group(1) in neighbnames)):
 			neighbnames.append(item.group(1))
 
 

@@ -15,7 +15,9 @@ def coords(nlist):
 		lines = open(basepath + r'\\' + file+'.txt')
 		for line in lines:
 			coords = ast.literal_eval(line)
-			xy = zip(*coords[0][0])
+			lens = [len(i[0]) for i in coords]
+			ind = [i for i,j in enumerate(lens) if j==max(lens)][0]
+			xy = zip(*coords[ind][0])
 			coordl[file] = xy
 
 	return coordl

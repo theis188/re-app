@@ -1,0 +1,11 @@
+veterans-administration
+https://www.walkscore.com/score/loc/lat=34.0620911655/lng=-118.468009157
+https://www.walkscore.com/score/loc/lat=34.0586946609/lng=-118.46055038
+https://www.walkscore.com/score/loc/lat=34.0547863514/lng=-118.451845383
+https://www.walkscore.com/score/loc/lat=34.0594607282/lng=-118.462939475
+https://www.walkscore.com/score/loc/lat=34.0576723008/lng=-118.449115235
+https://www.walkscore.com/score/loc/lat=34.0657789928/lng=-118.457078409
+https://www.walkscore.com/score/loc/lat=34.0585384092/lng=-118.448580012
+https://www.walkscore.com/score/loc/lat=34.0581643789/lng=-118.453990168
+https://www.walkscore.com/score/loc/lat=34.0563556116/lng=-118.452767928
+https://www.walkscore.com/score/loc/lat=34.0602192813/lng=-118.44975226
