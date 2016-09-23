@@ -3,28 +3,29 @@ import readcoords
 from shapely.geometry import Polygon, Point
 import matplotlib.pyplot as plt
 import urllib2
+from callyelp import restnumber
 
 def get_random_point_in_polygon(poly):
      (minx, miny, maxx, maxy) = poly.bounds
      while True:
          p = Point(random.uniform(minx, maxx), random.uniform(miny, maxy))
          if poly.contains(p):
-             return p
+             return [p.x,p.y]
 
-def get_walkscore(coord):
+#coords = readcoords.coords()
 
+# xy = coords[coords.keys()[0]]
+# xylist = zip(*xy)
 
-coords = readcoords.coords()
+# p = Polygon(xylist)
 
-xy = coords[coords.keys()[0]]
-xylist = zip(*xy)
+# points = [get_random_point_in_polygon(p) for i in range(5)]
+# restaurants = [restnumber(str(point.x),str(point.y)) for point in points]
 
-p = Polygon(xylist)
+# print restaurants
 
-points = [get_random_point_in_polygon(p) for i in range(100)]
+# ax = plt.subplot()
+# ax.plot(*xy)
+# for point in points: ax.plot(point.x,point.y,marker = 'o')
 
-ax = plt.subplot()
-ax.plot(*xy)
-for point in points: ax.plot(point.x,point.y,marker = 'o')
-
-plt.show()
+# plt.show()
