@@ -12,9 +12,22 @@
     <title>Matthew Theisen | Data science and beyond</title>
       <style>
  #mapid { 
-height: 600px;
-width: 800px;
+height: 800px;
+width: "100%";
 position: relative;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
 }
 
 body {
@@ -50,7 +63,7 @@ table, th, td {
 	<!-- Load css styles -->
 	<link rel="stylesheet" type="text/css" href="http://www.matthewtheisen.com/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="http://www.matthewtheisen.com/css/font-awesome.css" />
-	<link rel="stylesheet" type="text/css" href="http://www.matthewtheisen.com/css/style1.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.matthewtheisen.com/css/style3.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
   <script type="text/javascript" src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -64,8 +77,8 @@ table, th, td {
 	<div class="jumbotron home home-fullscreen" id="home">
 		<div class="container">
 			<div class="header-info">
-				<h1>Matthew Theisen</h1>
-				<p>Data science and beyond
+				<h1>Los Angeles</h1>
+				<p>Find your neighborhood
 				</p>
 			</div>
 		</div>
@@ -86,15 +99,94 @@ table, th, td {
 </div>
 
 <script>
-var mymap = L.map('mapid').setView([34, -118.3], 10);
+var mymap = L.map('mapid').setView([34, -118.5], 11);
 L.tileLayer('https://api.mapbox.com/styles/v1/mtheisen/citei76iz005f2jpac8g7ilcl/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibXRoZWlzZW4iLCJhIjoiY2l0ZWk0NTBoMDVmMDJ0bXlyNmxzZ3RnMyJ9.fErHtcHVcTsHCLMPN1ZcQg', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
     maxZoom: 18,
     id: 'mtheisen',
     accessToken: 'pk.eyJ1IjoibXRoZWlzZW4iLCJhIjoiY2l0ZWk0NTBoMDVmMDJ0bXlyNmxzZ3RnMyJ9.fErHtcHVcTsHCLMPN1ZcQg'
 }).addTo(mymap);
+var geojson;
+// ... our listeners
+ function highlightFeature(e) {
+    var layer = e.target;
 
-L.geoJson(neighbData).addTo(mymap)
+    layer.setStyle({
+        weight: 5,
+        color: '#666',
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
+    info.update(layer.feature.properties);
+}
+
+function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+    info.update();
+}
+
+function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
+}
+
+geojson=L.geoJson(neighbData, {style: style,
+  onEachFeature: onEachFeature
+  }).addTo(mymap);
+
+
+function getColor(d) {
+    return d > 1000 ? '#800026' :
+           d > 500  ? '#BD0026' :
+           d > 200  ? '#E31A1C' :
+           d > 100  ? '#FC4E2A' :
+           d > 50   ? '#FD8D3C' :
+           d > 20   ? '#FEB24C' :
+           d > 10   ? '#FED976' :
+                      '#FFEDA0';
+}
+
+function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.rank),
+        weight: 2,
+        opacity: 1,
+        color: 'gray',
+        fillOpacity: 0.4
+    };
+}
+
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+}
+
+var info = L.control();
+
+info.onAdd = function (mymap) {
+    this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+    this.update();
+    return this._div;
+};
+
+// method that we will use to update the control based on feature properties passed
+info.update = function (props) {
+    this._div.innerHTML = '<h4>Neighborhood Name</h4>' +  (props ?
+        '<b>' + props.name + '</b><br />' 
+        : 'Hover over a neighborhood');
+};
+
+info.addTo(mymap);
+
+
+
+
 </script>
 
 	<!-- Load Booststrap -->

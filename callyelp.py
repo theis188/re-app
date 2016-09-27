@@ -1,5 +1,6 @@
 from yelp.client import Client
 from yelp.oauth1_authenticator import Oauth1Authenticator
+import yelp
 import io
 import json
 import urllib2
@@ -27,8 +28,10 @@ def restnumber(x,y,r):
 	
 	r = requests.get(gurl, params=gparams)
 	results = r.json()['results']
-	addy = results[0]['formatted_address']
-	
-
-	result =  client.search(addy, **params)#.businesses[1].location.coordinate.latitude
+	try:
+		addy = results[0]['formatted_address']
+		result =  client.search(addy, **params)#.businesses[1].location.coordinate.latitude
+	except:
+		return "except"
+		
 	return len(result.businesses)

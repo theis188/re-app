@@ -14,7 +14,7 @@ namelist = [name.strip() for name in file]
 
 coordlist = readcoords.coords(namelist)
 
-num2get = 1
+num2get = 10
 
 openfile = open(r'Data/walkbiketrans.csv', "r")
 donelist = []
@@ -51,7 +51,7 @@ for i in range(len( coordlist.keys() )):
 		print y,x
 		#coordfile.write(r'https://www.walkscore.com/score/loc/lat='+y+'/lng='+x+'\n')
 
-		time.sleep(3)
+		time.sleep(0.75)
 		page = urllib2.urlopen(r'https://www.walkscore.com/score/loc/lat='+y+'/lng='+x)
 		for line in page:
 			score = re.search(r'<img src="//pp\.walk\.sc/badge/(.+)/score/(\d+)\.',line)

@@ -11,7 +11,7 @@ namelist = [name.strip() for name in file]
 
 coordlist = readcoords.coords(namelist)
 
-num2get = 1
+num2get = 10
 
 openfile = open(r'Data/restaurants.csv', "r")
 donelist = []
@@ -37,9 +37,12 @@ for i in range(len( coordlist.keys() )):
 	xylist = zip(*xy)
 	poly = Polygon(xylist)
 	restNumList = []
-	for j in range(50):
+	while len(restNumList) < 50:
 		pt = randpoint(poly)
 		num = restnumber(str(pt[0]),str(pt[1]),r)
+		if num == 'except':
+			print 'Bad call, try again'
+			continue
 		print num
 		restNumList.append(num)
 	towrite = key + ',' + ','.join(str(i) for i in restNumList) + ',' + r
