@@ -30,13 +30,17 @@ def buyprice(x,y):
 		print addy
 	except:
 		return "except"
-	addlist = results[0]['address_components']
-	ZIP = getaddprop(addlist,'postal_code')
-	sn = getaddprop(addlist,'street_number')
-	rt = getaddprop(addlist,'route')
+	try:
+		addlist = results[0]['address_components']
+		ZIP = getaddprop(addlist,'postal_code')
+		sn = getaddprop(addlist,'street_number')
+		if re.search(r'-', sn): return 'except'
+		rt = getaddprop(addlist,'route')
+	except:
+		print 'no address...'
+		return "except"
 
 	#print results
-	WAIT = raw_input('WAIT')
 
 	zURL = r'http://www.zillow.com/webservice/GetSearchResults.htm'
 	zKEY = open('zapi.txt').next()
@@ -52,14 +56,34 @@ def buyprice(x,y):
 
 	xmlsamp = open('xml.txt','w')
 	xmlsamp.write(XMLstr)
+	xmlsamp.close()
 
 	tree = ET.parse('xml.txt')
 	
-	amount = tree.find('response/results/result/zestimate/amount').text
-	houseUrl = tree.find('response/results/result/links/homedetails').text
-	#######if not
+	amount = tree.find('response/results/result/zestimate/amount')
+	houseUrl = tree.find('response/results/result/links/homedetails')
 
-	return amount
+	if (amount is None) or (houseUrl is None):
+		print 'bad address, no information returned'
+		return 'except'
+
+	amount = amount.text
+	houseUrl = houseUrl.text
+	schoollist = []
+	beds = 0
+	housepage = urllib2.urlopen(houseUrl)
+	for line in housepage:
+		bedsearch = re.search(r'<meta property="zillow_fb:beds" content="(\d+)">', line)
+		if bedsearch:
+			beds = bedsearch.group(1)
+		schoolsearch = re.search(r'<span class="gs-rating-number gs-rating-(\d+)"', line)
+		if schoolsearch:
+			schoollist.append( int(schoolsearch.group(1)) )
+
+	if int(beds) > 5:
+		print 'too many beds:', beds
+		return 'except'
+	return [amount, sum(schoollist)/len(schoollist) ]
 
 randpoint = genpoints.get_random_point_in_polygon
 
@@ -67,9 +91,10 @@ file = open('goodnames.txt')
 namelist = [name.strip() for name in file]
 coordlist = readcoords.coords(namelist)
 
-num2get = 1
+num2get = 5
 
 openfile = open(r'Data/prices.csv', "r")
+
 donelist = []
 
 for line in openfile:
@@ -79,6 +104,7 @@ print donelist
 aaa = raw_input('already done continue?')
 
 myfile = open(r'Data/prices.csv', "a")
+schoolfile = open(r'Data/schools.csv', "a")
 z=0
 for i in range(len( coordlist.keys() )):
 	if z == num2get: break
@@ -90,11 +116,28 @@ for i in range(len( coordlist.keys() )):
 	xylist = zip(*xy)
 	poly = Polygon(xylist)
 	buyprices = []
-	while len(buyprices) < 1:
+	schools = []
+	while len(buyprices) < 2:
 		pt = randpoint(poly)
-		price = buyprice(str(pt[0]),str(pt[1]))
+		ret = buyprice(str(pt[0]),str(pt[1]))
+		if ret == 'except': continue
+		price,school = ret
+		if price == None: continue
+		print 'success!'
+		print 'price =', price
+		print 'schoolq =', school
 		buyprices.append(price)
+		schools.append(school)
+	towrite1 = key + ',' + ','.join(str(i) for i in buyprices)
+	towrite2 = key + ',' + ','.join(str(i) for i in schools)
+	print towrite1
+	print towrite2
+	aaa = raw_input('OK to write?')
 
+	myfile.write(towrite1+'\n')
+	schoolfile.write(towrite2+'\n')
+
+print 'exiting...'
 	
 
 
