@@ -117,7 +117,7 @@ for i in range(len( coordlist.keys() )):
 	poly = Polygon(xylist)
 	buyprices = []
 	schools = []
-	while len(buyprices) < 2:
+	while len(buyprices) < 5:
 		pt = randpoint(poly)
 		ret = buyprice(str(pt[0]),str(pt[1]))
 		if ret == 'except': continue
