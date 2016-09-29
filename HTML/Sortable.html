@@ -14,10 +14,10 @@
     width: 240px;
     min-height: 20px;
     list-style-type: none;
-    margin: 0;
     padding: 5px 0 0 0;
-    float: left;
-    margin-right: 10px;
+    margin-left:auto;
+    margin-right:auto;
+    display: center;
   }
   #sortable1 li, #sortable2 li {
     border: 1px solid #eee;
@@ -25,8 +25,14 @@
     padding: 5px;
     font-size: 1.2em;
     width: 228px;
-
+    display: center;
   }
+
+.centerBlock {
+  display: table;
+  margin: 0 auto;
+}
+
   </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -39,20 +45,15 @@
   </script>
 </head>
 <body>
+            
 
 <div class="row">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-4">
-    <p><h1>Features</h1></p></div>
-    <div class="col-lg-4">
-    <p><h1>Rank</h1></p></div>
-    <div class="col-lg-2"></div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2"></div>
-  <div class="col-lg-4">
-  <ul id="sortable1" class="connectedSortable">
+    <div class="col-sm-1"></div>
+    
+    <div class="col-sm-5">
+    <div class="text-center">
+      <p><h1>Features</h1></p>
+   <ul id="sortable1" class="connectedSortable">
     <li class="ui-state-default" id="prop-crime">Property Crime</li>
     <li class="ui-state-default" id="viol-crime">Violent Crime</li>
     <li class="ui-state-default" id="air-qual">Air Quality</li>
@@ -62,24 +63,31 @@
     <li class="ui-state-default" id="rest-dens">Restaurant Density</li>
     <li class="ui-state-default" id="buy-price">Price to Buy</li>
   </ul>
-  </div>
-  
-  <div class="col-lg-4">
+
+    </div>
+    </div>
+
+    <div class="col-sm-5">
+    <div class="text-center">
+      <p><h1>Rank</h1></p>
     <ul id="sortable2" class="connectedSortable">
     </ul>
-  </div>
 
-  <div class="col-lg-2"></div>
-
-
+    </div>
+    </div>
+    
+    <div class="col-sm-1"></div>
 </div>
-<br> <br> <br> <br>
+
+<br> <br>
 
 
 <div class="row">
-    <div class="col-lg-3"></div>
-    <div class="col-lg-4"><img src = "help.png"> </img></div>
-    <div class="col-lg-4"></div>
+  <div class="col-sm-12">
+    <div class="centerBlock">
+      <img class="img-responsive" src="help.png"> </img>
+    </div>
+  </div>
 </div>
 
 
