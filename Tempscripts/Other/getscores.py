@@ -171,6 +171,6 @@ def getrank(cols):
 	n = len(cols)
 	scoremat = scores()
 	nameslist = names()
-	return [(i+1, nameslist.index(j) ) for i,j in enumerate(cols)]
-
-print getrank([ "viol-crime" , "buy-price" ])
+	norm = sum( [ 1/float(i+1) for i in range(n)] )
+	rankinf = [(i+1, nameslist.index(j) ) for i,j in enumerate(cols)]
+	return [ '{0:.1f}'.format( sum( [ 1/float(i)*sl[j] for i,j in rankinf ] )/norm ) for sl in scoremat ]

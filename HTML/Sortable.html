@@ -86,12 +86,29 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="centerBlock">
+      <button onclick="submit()" type="button">Submit</button>
       <img class="img-responsive" src="help.png"> </img>
     </div>
   </div>
 </div>
 
+<script>
+function submit() {
 
+var ul = document.getElementById("sortable2");
+var items = ul.getElementsByTagName("li");
+var tosend = []
+for (var i = 0; i < items.length; ++i) {
+  tosend.push(items[i].id)
+  }
+console.log(tosend)
+
+  $.getJSON('/appy/_neighb_rank', {
+          colnames: tosend
+        }, function(data) {
+//
+}
+</script>
 
  
 </body>
