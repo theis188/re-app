@@ -11,6 +11,9 @@ def cash(n):
 	ret = '$'+num+'.00'
 	return ret
 
+def rent(n):
+	return cash(n) + ' / month'
+
 def crime(n):
 	return n+' / 10k pop / yr'
 
@@ -42,6 +45,7 @@ def dataread(stem,fund):
 
 fundic = {
 	'aqf':aqi,
+	'rpf':rent,
 	'hpf':cash,
 	'pcf':crime,
 	'pdf':dens,

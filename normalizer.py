@@ -33,6 +33,7 @@ def dataread(stem,fund):
 fundic = {
 	'aqf':neg,
 	'hpf':neglog,
+	'rpf':neg,
 	'pcf':neg,
 	'pdf':standard,
 	'rdf':standard,

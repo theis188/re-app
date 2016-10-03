@@ -8,6 +8,7 @@ class processor():
 		"pop-dens-l",
 		"rest-dens",
 		"buy-price",
+		"rent-price",
 		"walk-score"]
 
 		self.namedic = {"prop-crime":"pcf", 
@@ -18,6 +19,7 @@ class processor():
 		"pop-dens-l":"pdf",
 		"rest-dens":"rdf",
 		"buy-price":"hpf",
+		"rent-price":"rpf",
 		"walk-score":"wsf"}
 
 	def openfiles(self):
